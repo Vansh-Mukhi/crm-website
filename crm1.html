@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Order Issue Resolution</title>
+    <link rel="stylesheet" href="crm1.css">
+    <!-- <link rel="stylesheet" href="crm3.css"> -->
+</head>
+<body>
+    <h1>Zomato Order Issue Resolution</h1>
+
+    <form id="orderIssueForm">
+        <label for="orderIssue">Select the order issue you are facing:</label>
+        <select id="orderIssue" onchange="showSolution()">
+            <option value="orderDelay">Order Delay</option>
+            <option value="incorrectItems">Incorrect or Missing Items</option>
+            <option value="orderTrackingFailure">Order Tracking Failure</option>
+            <option value="restaurantCommunication">Restaurant Communication Issues</option>
+            <option value="packagingDeliveryIssues">Packaging and Delivery Issues</option>
+            <option value="refundResolution">Refund and Resolution Process</option>
+            <option value="appWebsiteDiscrepancies">App and Website Discrepancies</option>
+            <option value="paymentIssues">Payment Issues</option>
+        </select>
+
+        <div id="solutionContainer"></div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function showSolution() {
+            let orderIssue = document.getElementById('orderIssue').value;
+            let solutionContainer = document.getElementById('solutionContainer');
+
+            solutionContainer.innerHTML = '';
+
+            switch (orderIssue) {
+                case 'orderDelay':
+                    solutionContainer.innerHTML = '<p>If your order is experiencing delays, please contact the restaurant directly through the Zomato app or website. You can also track your order status using the app or website.</p>';
+                    break;
+
+                case 'incorrectItems':
+                    solutionContainer.innerHTML = '<p>If your order contains incorrect or missing items, please contact Zomato customer support immediately. They will investigate the issue and take appropriate action to resolve it.</p>';
+                    break;
+
+                case 'orderTrackingFailure':
+                    solutionContainer.innerHTML = '<p>If you are unable to track your order using the Zomato app or website, please refresh the page or try using a different device. If the issue persists, contact Zomato customer support for assistance.</p>';
+                    break;
+
+                case 'restaurantCommunication':
+                    solutionContainer.innerHTML = '<p>If you are experiencing communication issues with a restaurant, please contact Zomato customer support. They can help you communicate with the restaurant and resolve the issue.</p>';
+                    break;
+
+                case 'packagingDeliveryIssues':
+                    solutionContainer.innerHTML = '<p>If your order has been damaged or mishandled during delivery, please contact Zomato customer support immediately. They will document the issue and take appropriate action to resolve it.</p>';
+                    break;
+
+                case 'refundResolution':
+                    solutionContainer.innerHTML = '<p>To request a refund or resolve an order issue, please contact Zomato customer support through the app, website, or by phone. They will guide you through the process and address your concerns.</p>';
+                    break;
+
+                case 'appWebsiteDiscrepancies':
+                    solutionContainer.innerHTML = '<p>If you notice inconsistencies between the Zomato app and website, please report the issue to Zomato customer support. They will investigate the discrepancies and take necessary corrective measures.</p>';
+                    break;
+
+                case 'paymentIssues':
+                    solutionContainer.innerHTML = '<p>If you encounter payment-related problems, please contact Zomato customer support immediately. They will investigate the issue and ensure that your payment information is secure.</p>';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

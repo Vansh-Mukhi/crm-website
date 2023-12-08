@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Product Related Issue</title>
+    <link rel="stylesheet" href="crmproduct.css">
+</head>
+<body>
+    <h1>Zomato Product Related Issue</h1>
+    <form id="productissueform">
+        <label for="productissue">Select the product issue you are facing:</label>
+        <select id="productissue" onchange="showSolution()">
+            <option value="damagedproduct">Damaged Product</option>
+            <option value="notsameorder">The product you ordered is not same</option>
+            <option value="notreceived">The order is not handed to you</option>
+        </select>
+        <div id="solutionContainer"></div>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function showSolution() {
+            let productIssue = document.getElementById('productIssue').value;
+            let solutionContainer = document.getElementById('solutionContainer');
+
+            solutionContainer.innerHTML = '';
+            
+            switch (productIssue) {
+                case 'damagedproduct':
+                    solutionContainer.innerHTML = '<p>If your order is experiencing damages, please contact the restaurant directly through the Zomato app or website. You can also track your order status using the app or website.</p>';
+                    break;
+
+                case 'notsameorder':
+                    solutionContainer.innerHTML = '<p>If your order contains incorrect or missing items, please contact Zomato customer support immediately. They will investigate the issue and take appropriate action to resolve it.</p>';
+                    break;
+
+                case 'notreceived':
+                    solutionContainer.innerHTML = '<p>If you are did not receivd your order contact using the Zomato app or website, please refresh the page or try using a different device. If the issue persists, contact Zomato customer support for assistance.</p>';
+                    break;
+            }
+        }
+        </Script>
+</body>
+</html>

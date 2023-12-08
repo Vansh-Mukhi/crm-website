@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    text-align: center;
+    background: url(	https://mir-s3-cdn-cf.behance.net/project_modules/disp/388eca72914835.5bf79177986e4.jpg) ;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select, input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+}
